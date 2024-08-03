@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet", href="{{ url_for('static', filename='styles.css') }}">
+
+    <title> My Website </title>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">Rozhino Shamal</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="{{ url_for('tutorials') }}">Tutorial</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}  {% endblock %}
+    </main>
+
+    <footer class="footer-box">
+
+        <div class="social-icons">
+            <a href="#" class="social-icon"><img src="{{ url_for('static', filename='images/youtube_icon.png') }}" alt="Youtube"></a>
+            <a href="#" class="social-icon"><img src="{{ url_for('static', filename='images/instagram_icon.png') }}" alt="Instagram"></a>
+            <a href="#" class="social-icon"><img src="{{ url_for('static', filename='images/linkedin_icon.png') }}" alt="LinkedIn"></a>
+            <a href="#" class="social-icon"><img src="{{ url_for('static', filename='images/github_icon.png') }}" alt="Github"></a>
+        </div>
+
+        
+
+        <div class=".footer-bottom">
+            <p class="footer-text">&copy; 2024 Rozhino Shamal | All Rights Reserved</p>
+        </div>
+
+        <!-- <div class="page-links">
+            <a href="index.html" class="page-link"> Home</a>
+            <a href="work.html" class="page-link"> Work</a>
+            <a href="blog.html" class="page-link"> Blog</a>
+            <a href="{{ url_for('contact') }}" class="page-link"> Contact</a>
+            <a href="{{ url_for('about') }}" class="page-link"> About</a>
+        </div> -->
+
+    </footer>
+
+
+</body>
+</html>
